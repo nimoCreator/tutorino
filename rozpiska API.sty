@@ -1,0 +1,35 @@
+Metoda API "/ogloszenie" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "ogłoszenie" w bazie danych pasujące do kryteriów podanych do Api poprzez GET.
+
+Metoda API "/operator" zwraca zestringowanego JSON'a z infomracjami o operatorze danego użytkownika (ucznia) po {user_id}
+
+Metoda API "/przedmioty" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "przedmioty" w bazie danych.
+
+Metoda API "/rating" zwraca zestringowanego JSON'a z informacjami o ocenach danego użytkownika po {user_id}
+
+Metoda API "/reports" zwraca zestringowanego JSON'a z nierozpatrzonymi zglószniami (dla administratorów)
+
+Metoda API "/uczen" zwraca zestringowanego JSON'a wszystkie niezbedne informacje o uczniu, jego korepetycje, operatora, po jego uuid po {user_id}
+
+Metoda API "/users" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie uuid z tabeli "users" w bazie danych.
+
+Metoda API "/role" zwraca zestringowanego JSON'a informacjami o roli danego użytkownika po {user_id}
+
+Metoda API "/korepetycje" zwraca zestringowanego JSON'a z informacją o wszyskich korepetycjach użytkownika (osobno jako korepetytor, uczeń i operator) po {user_id}
+
+Metoda API "/czlonkowie_konwersacji" zwraca zestringowanego JSON'a listę wszystkich konwersacji w której znajduje się użytkownik po jego uuid {user_id}
+
+Metoda API "/korepetytor_profile" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "korepetytor" w bazie danych po uuid={user_id} i odpowiadające kuid wiersze z tabeli "rating" i "ogloszenie".
+
+Metoda API "/konwersacje" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "konwersacje" w bazie danych po owner = {user_id}.
+
+Metoda API "/wiadomosci" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "wiadomosci" w bazie danych po konferencja = {konwersacja_id}.
+
+Metoda API "/korepetycje_k" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "korepetycje" w bazie danych po korepetytor = {user_id}.
+
+Metoda API "/korepetycje_u" zwraca zestringowanego JSON'a reprezentującego tabelę zawierającą wszystkie rekordy z tabeli "korepetycje" w bazie danych po uczen = {user_id}.
+
+Metoda API "/newuser" przyjmuje string i zwraca w postacji zestringowanego JSON'a informacje czy użytkownik o zadanym emailu bądź loginie istnieje {login/email}
+
+Metoda API "/login" zwraca czy udało się zalogować użytkownika, zwraca sesję i jej klucz w postaci zestringowanego JSON'a {login/email} {hasło}
+
+Metoda API "/register" zwraca czy udało się założyć konto użytkownika, zwraca sesję i jej klucz w postaci zestringowanego JSON'a {login} {email} {hasło} {imie} {nazwisko}
