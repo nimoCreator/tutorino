@@ -1,0 +1,7 @@
+body{
+    background-image: url("http://picsum.photos/420/69");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    backdrop-filter: blur(2rem);
+}

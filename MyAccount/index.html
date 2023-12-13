@@ -3,12 +3,68 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>💡Tutorino - Konto użytkownika</title>
+    <title>Panel Użytkownika -💡Tutorino</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../common/css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
+    <link rel='icon' href='../common/img/favicon.png'>
     <script src='main.js'></script>
 </head>
 <body>
-    
+    <navbar>
+        <topsection>
+            <logo>
+                <img src="../common/img/favicon.png"></img>
+                <h1 style="display: none;">Tutorino</h1>
+                <span style="display: none;">Powrót do strony głównej</span>
+            </logo>
+            <hr/>
+            <nav>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/calendar.svg"></img></icon>
+                    <span>Kalendarz</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/money.svg"></img></icon>
+                    <span>Nalerznosci</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/search.svg"></img></icon>
+                    <span>Wyszukiwarka</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/posts.svg"></img></icon>
+                    <span>Moje Ogłoszenia</span>
+                </a>
+            </nav>
+        </topsection>
+        <bottomsection>
+            <nav>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/notifications.svg"></img></icon>
+                    <span>Powiadomienia</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/messages.svg"></img></icon> 
+                    <span>Wiadomości</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/support.svg"></img></icon>
+                    <span>Wsparcie</span>
+                </a>
+                <a>
+                    <icon><img src="../common/img/panel_navbar/settings.svg"></img></icon>
+                    <span>Ustawienia</span>
+                </a>
+            </nav>
+            <hr />
+            <user>
+                <pfp><img src="http://picsum.photos/200"></pfp>
+                <name>Imię Nazwisko</name>
+                <tooltip>Wyloguj się</tooltip>
+            </user>
+        </bottomsection>    
+    </navbar>
 </body>
 </html>
