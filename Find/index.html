@@ -3,12 +3,55 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>💡Tutorino - Znajdź korepetycje</title>
+    <title>Znajdź korepetycje |💡 Tutorino</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../common/css/base.css'>
+
+    <link rel='icon' href='../common/img/favicon.png'>
+    <script src='./js/scripts.js'></script>
 </head>
 <body>
-    
+    <navbar>
+        <logo>
+            <img src="../common/img/favicon.png"></img>
+            <h1>Tutorino</h1>
+        </logo>
+        <user id="user_profile">
+            <tooltip>Zaloguj się</tooltip>
+            <pfp><img src="../common/img/user.png"></pfp>
+        </user>  
+    </navbar>
+    <main>
+        <search_engine>
+            <input type="text">
+            <button id="find_button">🔍</button>
+            <quick_actions>
+                <span>Matematyka</span>
+                <span>Fizyka</span>
+                <span>Chemia</span>
+                <span>Biologia</span>
+                <span>Historia</span>
+                <span>Geografia</span>
+                <span>Angielski</span>
+            </quick_actions>
+        </search_engine>
+        <resoults>
+            <resoult>
+                <label>
+
+                </label>
+                <description>
+
+                </description>
+                <pfp>
+                    <img src="https://picsum.photos/200"></img>
+                </pfp>
+
+            </resoult>
+        </resoults>
+    </main>
 </body>
 </html>

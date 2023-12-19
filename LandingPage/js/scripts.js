@@ -9,6 +9,9 @@ window.addEventListener('load', function() {
     //     });
 
     this.document.getElementById('find_button').addEventListener('click', () => {
-        window.location.href = '/find'; // Replace with the desired URL
+        window.location.href = '/find';
+    });
+    this.document.getElementById('user_profile').addEventListener('click', () => {
+        window.location.href = '/login';
     });
 });

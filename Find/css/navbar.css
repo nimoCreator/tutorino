@@ -1,0 +1,92 @@
+/* #region BASE */
+:root {
+    --navbar-height: 5rem;
+    --navbar-margin: 1rem;
+    --navbar-padding: 0.5rem;
+    --inner-border-radius: .5rem;
+
+    --navbar-color: #f5f5f5;
+}
+navbar{
+    position: fixed;
+    top: var(--navbar-margin);
+    left: var(--navbar-margin);
+    width: calc(100vw - var(--navbar-margin)*2);
+    height: var(--navbar-height);
+    background: var(--navbar-color);
+    padding: var(--navbar-padding);
+    border-radius: var(--inner-border-radius);
+    z-index: 20000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: width .3s ease-in-out;
+    outline: 2px solid #fff4;
+    outline-offset: 2px;
+}
+
+/* #endregion BASE */
+
+/* #region LOGO */
+
+navbar > logo {
+    background-color: var(--navbar-color);
+    overflow: hidden;
+    border-radius: var(--inner-border-radius);
+    cursor: pointer;
+    border-radius: calc(var(--inner-border-radius) / 2);
+
+    height: calc( var(--navbar-height) - var(--navbar-padding) * 2 );
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: .5rem;
+    padding-left: 0.5rem;
+}
+
+navbar > logo > img {
+    width: calc( var(--navbar-height) - var(--navbar-padding) * 4 );
+    height: calc( var(--navbar-height) - var(--navbar-padding) * 4 );
+    object-fit: cover;
+
+    filter: drop-shadow(0 0 1rem #0004);
+}
+
+navbar > logo > h1 {
+    color: #222;
+}
+
+/* #endregion LOGO */
+
+/* #region USER */
+
+navbar > user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+
+    height: calc( var(--navbar-height) - var(--navbar-padding) * 2 );
+    overflow: hidden;
+
+    cursor: pointer;
+}
+navbar > user > pfp {
+    width: calc(var(--navbar-height) - var(--navbar-padding) * 4);
+    height: calc(var(--navbar-height) - var(--navbar-padding) * 4);
+
+    margin-right: 1rem;
+    filter: drop-shadow(0 0 1rem #0002);
+}
+navbar > user> pfp > img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--inner-border-radius);
+}
+
+
+/* #endregion USER */
+

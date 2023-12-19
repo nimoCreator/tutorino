@@ -1,0 +1,32 @@
+body {
+    background-image: url(http://picsum.photos/1920/1080);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    backdrop-filter: blur(2rem) brightness(0.5) saturate(4);
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1rem;
+
+    height: 120vh;
+    width: 120vw;
+    box-shadow: inset 0rem -2rem 6rem #000;
+
+    white-space: nowrap;
+}
