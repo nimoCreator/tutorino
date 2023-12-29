@@ -12,6 +12,6 @@ window.addEventListener('load', function() {
         window.location.href = '/find';
     });
     this.document.getElementById('user_profile').addEventListener('click', () => {
-        window.location.href = '/login';
+        window.location.href = '/myaccount';
     });
 });

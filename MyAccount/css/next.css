@@ -1,0 +1,23 @@
+:root {
+    --next-margin: 1rem;
+    --next-height: 3rem;
+}
+
+next {
+    position: absolute;
+    top: var(--next-margin);
+    left: calc( var(--navbar-width) + var(--navbar-margin) + 1rem);
+    right: calc( var(--scrollbar-width) + var(--scrollbar-spacing));
+    transition: left .3s ease-in-out;
+
+    height: var(--next-height);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+
+    background-color: #d8f2ff;
+
+
+
+
+}

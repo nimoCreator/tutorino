@@ -5,9 +5,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Panel Użytkownika -💡Tutorino</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
     <link rel='stylesheet' type='text/css' media='screen' href='../common/css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../common/css/scroll-bar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/next.css'>
+
+
     <link rel='icon' href='../common/img/favicon.png'>
     <script src='main.js'></script>
 </head>
@@ -62,9 +68,25 @@
             <user>
                 <pfp><img src="http://picsum.photos/200"></pfp>
                 <name>Imię Nazwisko</name>
-                <tooltip>Wyloguj się</tooltip>
+                <!-- <tooltip>Wyloguj się</tooltip> -->
             </user>
         </bottomsection>    
     </navbar>
+    <main>
+        <calendar class="templong">
+            <label>Kalendarz</label>
+        </calendar>
+        <finances  class="templong">
+            <label>Nalerzności</label>
+        </finances>
+        <settings>
+            <label>Ustawienia</label>
+        </settings>
+    </main>
+    <next>
+        Nastepne zajecia za 12min
+        Lokalizacja
+        Imie Nazwisko
+    </next>
 </body>
 </html>

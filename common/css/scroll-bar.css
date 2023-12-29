@@ -1,0 +1,21 @@
+/* width */
+:root {
+    --scrollbar-width: 0.75rem;
+    --scrollbar-spacing: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: calc(var(--scrollbar-width)); /* Adjusted width */
+    border-left: var(--scrollbar-spacing) solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  margin: 20px;
+    background-clip: padding-box;
+    background-color: #fff;
+}
+

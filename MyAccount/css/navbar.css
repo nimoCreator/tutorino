@@ -1,10 +1,18 @@
 /* #region BASE */
+/* * {
+    outline: solid 1px #f00;
+} */
 :root {
     --navbar-width: 5rem;
     --navbar-margin: 1rem;
     --navbar-padding: 1rem;
-    --navbar-element-height: 5rem;
+    --navbar-element-height: 3rem;
+    --navbar-element-width: 3rem;
     --inner-border-radius: .5rem;
+}
+
+:root:has(navbar:hover) {
+    --navbar-width: 15rem;
 }
 
 navbar{
@@ -24,9 +32,6 @@ navbar{
     transition: width .3s ease-in-out;
     outline: 2px solid #fff4;
     outline-offset: 2px;
-}
-navbar:hover {
-    width: 15rem;
 }
 
 hr{
@@ -57,11 +62,11 @@ navbar > topsection > logo {
     
 }
 navbar > topsection > logo > img {
-    width: calc( var(--navbar-width) - var(--navbar-padding) * 2 );
-    height: calc( var(--navbar-width) - var(--navbar-padding) * 2 );
+    width: var(--navbar-element-width);
+    height: var(--navbar-element-width);
     object-fit: cover;
 
-    filter: drop-shadow(0 0 1rem #0004);
+    /* filter: drop-shadow(0 0 1rem #0004); */
 }
 
 /* #endregion LOGO */
@@ -76,24 +81,39 @@ navbar > * > nav {
 navbar > * > nav > a {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0rem;
     align-items: center;
+    justify-content: flex-start;
+    transition: all 0.5s ease-in-out;
+    padding-left: 0.5rem;
+
+    cursor: pointer;
+}
+navbar:hover > * > nav > a {
+    gap: 1rem;
+    padding-left: 0rem;
 }
 navbar > * > nav > a > icon {
-    width: calc(var(--navbar-width) - var(--navbar-padding) * 2);
-    height: calc(var(--navbar-width) - var(--navbar-padding) * 2);
+    width: calc( var(--navbar-element-width) * 0.71 );
+    height: calc( var(--navbar-element-width) * 0.71 );
     pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 navbar > * > nav > a > icon > img {
-    width: 71%;
-    height: calc(var(--navbar-width) - var(--navbar-padding) * 2);
+    width: calc( var(--navbar-element-width) * 0.71 );
+    height: calc( var(--navbar-element-width) * 0.71 );
     pointer-events: none;
+    filter: invert(0.5) brightness(1.6);
 }
 navbar > * > nav > a > span {
     white-space: nowrap;
     opacity: 0;
     transition: opacity .2s .0s ease-in-out;
     transform-origin: left;
+    width: 0;
 }
 navbar:hover > * > nav > a > span,
 navbar:focus > * > nav > a > span {
@@ -127,16 +147,38 @@ navbar:focus > * > user > type {
 }
 
 navbar > * > user > pfp {
-    width: calc(var(--navbar-width) - var(--navbar-padding) * 2);
-    height: calc(var(--navbar-width) - var(--navbar-padding) * 2);
+    width: var(--navbar-element-width);
+    height: cvar(--navbar-element-width);
 }
 navbar > * > user > pfp > img {
-    width: calc(var(--navbar-width) - var(--navbar-padding) * 2);
-    height: calc(var(--navbar-width) - var(--navbar-padding) * 2);
+    width: var(--navbar-element-width);
+    height: var(--navbar-element-width);
 
     border-radius: var(--inner-border-radius);
 }
 
-
 /* #endregion USER */
 
+/* #region HOVER ANIMATIONS */
+navbar > * > nav > a {
+    background-color: #00aaff00;
+    outline: 0.125rem solid #00aaff00;
+    border-radius: 0.125rem;
+
+    transition: 0.6s;
+}
+navbar > * > nav > a:hover {
+    background-color: #00aaff11;
+    outline: 0.5rem solid #00aaff11;
+    
+    transition: 0.2s;
+}
+navbar > * > nav > a > icon > img {
+    transition: 0.6s;
+}
+navbar > * > nav > a:hover > icon > img  {
+    filter: invert(0) brightness(1);
+    transition: 0.2s;
+}
+
+/* #endregion */
