@@ -2,9 +2,10 @@
     outline: 1px solid red;
 } */
 main {
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height) - var(--navbar-margin) * 2);
     width: 100%;
     margin: 0;
+    margin-top: calc( var(--navbar-height) + var(--navbar-margin) );
     padding: 0 2rem;
 
     padding-top: var(--navbar-height);
@@ -12,9 +13,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     position: relative;
-    z-index: 10;
 }
 
 main > welcome {

@@ -9,7 +9,10 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/messages.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/auth.css'>
     <script src='./js/load.js'></script>
+    <script src="./js/auth.js"></script>
 </head>
 <body>
     <navbar>
@@ -22,22 +25,26 @@
         <messages>
             <message>
                 Aby w pełni korzystać z serwisu, należy się zalogować.
-                Jeżeli nie posiadasz konta, możesz je założyć w pełni za darmo!
+                Jeżeli nie posiadasz konta, możesz je założyć w pełni <b>za darmo!</b>
             </message>
         </messages>
         <authorization>
-            <form id="step_1">
+            <form id="step_1" class="step">
                 <input type="text" name="email" placeholder="email / login">
                 <input type="subimt" value="Dalej">
             </form>
-            <form id="login">
+            <form id="login" class="step hidden">
                 <input type="text" name="email" placeholder="email / login" disabled>
                 <input type="password" name="password" placeholder="hasło">
                 <input type="subimt" value="Dalej">
             </form>
-            <form id="register">
+            <form id="register" class="step hidden">
                 <input type="email" name="email" placeholder="email">
                 <input type="text" name="login" placeholder="login">
+                <input type="text" name="name" placeholder="email">
+                <input type="text" name="surname" placeholder="login">
+                <input type="text" name="password" placeholder="password">
+                <input type="text" name="password2" placeholder="login">
                 <input type="subimt" value="Dalej">
             </form>
         </authorization>
