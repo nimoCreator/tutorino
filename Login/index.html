@@ -3,14 +3,47 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>💡Tutorino - Zaloguj się</title>
+    <title>Logowanie |💡Tutorino</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../common/css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
     <script src='./js/load.js'></script>
 </head>
 <body>
-    <korepetycje>
+    <navbar>
+        <logo>
+            <img src="../common/img/favicon.png"></img>
+            <h1>Tutorino</h1>
+        </logo>
+    </navbar>
+    <main>
+        <messages>
+            <message>
+                Aby w pełni korzystać z serwisu, należy się zalogować.
+                Jeżeli nie posiadasz konta, możesz je założyć w pełni za darmo!
+            </message>
+        </messages>
+        <authorization>
+            <form id="step_1">
+                <input type="text" name="email" placeholder="email / login">
+                <input type="subimt" value="Dalej">
+            </form>
+            <form id="login">
+                <input type="text" name="email" placeholder="email / login" disabled>
+                <input type="password" name="password" placeholder="hasło">
+                <input type="subimt" value="Dalej">
+            </form>
+            <form id="register">
+                <input type="email" name="email" placeholder="email">
+                <input type="text" name="login" placeholder="login">
+                <input type="subimt" value="Dalej">
+            </form>
+        </authorization>
+    </main>
+    <footer>
         
-    </korepetycje>
+    </footer>   
 </body>
 </html>
