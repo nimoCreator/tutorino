@@ -1,0 +1,19 @@
+main searchbar {
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: calc( var(--navbar-margin) + var(--navbar-height) - var(--inner-border-radius));
+    width: calc(100vw - var(--navbar-margin)*2);
+
+    padding: 1rem 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* main searchbar > * {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+} */
+
