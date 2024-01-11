@@ -29,7 +29,7 @@ main > welcome {
     gap: 1rem;
 }
 main > welcome > button {
-    outline: 0.125rem solid #00aaff;
+    outline: 0.125rem solid #22aaff;
     border: none;
     box-sizing: border-box;
     background-color: #cceeff;
@@ -41,7 +41,7 @@ main > welcome > button {
     transition: all 0.2s ease-in-out;
 }
 main > welcome > button:hover {
-    background-color: #00aaff;
+    background-color: #22aaff;
     color: #fff;
     transform: scale(1.05);
     transition: all 0.05s ease-in-out;
