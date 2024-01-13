@@ -1,7 +1,7 @@
 # Tutorino
 **Projekt IO 2023/2024<br>**
 
-## 1.Zamysł projektu:**<br>
+## 1.Zamysł projektu:
 Projekt ma na celu stworzenie systemu i aplikacji wspomagających korepetytorów i uczniów w zarządzaniu zajęciami, płatnościami oraz organizacją. Aplikacja ma umożliwiać generowanie kalendarza zajęć, śledzenie płatności, a także integrację z komunikatorami online. Dodatkowo, planowane jest wprowadzenie powiadomień push oraz sekcji z informacjami do korepetycji, takimi jak adres czy link do spotkania online.
 
 ## 2.Funkcjonalności:
