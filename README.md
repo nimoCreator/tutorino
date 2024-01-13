@@ -11,7 +11,7 @@ Projekt ma na celu stworzenie systemu i aplikacji wspomagających korepetytorów
 -Gromadzenie statystyk korepetytorów i uczniów.<br>
 -Pomoc w znalezieniu uczniów dla korepetytorów oraz vice versa.<br>
 
-##3.Założenia:
+## 3.Założenia:
 -Ułatwienie zarządzania kalendarzem i płatnościami.<br>
 -Pomoc w znalezieniu uczniów dla korepetytorów.<br>
 -Ułatwienie organizacji zajęć zdalnych.<br>
