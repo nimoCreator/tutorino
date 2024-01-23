@@ -1,10 +1,12 @@
 body {
-    background-image: url(http://picsum.photos/1920/1080);
+    /* background-image: url(http://picsum.photos/1920/1080);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
+    background-position: center; 
     backdrop-filter: blur(2rem) brightness(0.5) saturate(4);
+    */
+
+    background-color: #fff;
 
     position: relative;
     display: flex;
