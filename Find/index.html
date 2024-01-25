@@ -12,33 +12,33 @@
     <link rel='stylesheet' type="text/css" media="screen" href="./css/searchbar.css">
 
     <link rel='icon' href='../common/img/favicon.png'>
-    <script src='./js/scripts.js'></script>
+    <script src='./js/load.js'></script>
 </head>
 <body>
     <navbar>
-        <logo>
+        <logo id="icon_tutorino">
             <img src="../common/img/favicon.png"></img>
             <h1>Tutorino</h1>
         </logo>
         <user id="user_profile">
             <tooltip>Zaloguj się</tooltip>
             <pfp><img src="../common/img/user.png"></pfp>
-        </user>  
+        </user>
     </navbar>
     <main>
         <searchbar>
             <searchfield>
-                <input type="text">
+                <input type="text" id="search_input">
                 <button id="find_button">🔎</button>
             </searchfield>
             <quick_actions>
-                <button>Matematyka</button>
-                <button>Fizyka</button>
-                <button>Chemia</button>
-                <button>Biologia</button>
-                <button>Historia</button>
-                <button>Geografia</button>
-                <button>Angielska</button>
+                <button onclick="addToInput('Matematyka')">Matematyka</button>
+                <button onclick="addToInput('Fizyka')">Fizyka</button>
+                <button onclick="addToInput('Chemia')">Chemia</button>
+                <button onclick="addToInput('Biologia')">Biologia</button>
+                <button onclick="addToInput('Historia')">Historia</button>
+                <button onclick="addToInput('Geografia')">Geografia</button>
+                <button onclick="addToInput('Angielska')">Angielska</button>
             </quick_actions>
         </searchbar>
         <resoults>

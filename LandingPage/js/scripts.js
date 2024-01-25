@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
         window.location.href = './find/index.html';
     });
     this.document.getElementById('user_profile').addEventListener('click', () => {
-        window.location.href = './myaccount/index.html';
+        window.location.href = './Login/index.html';
     });
     this.document.getElementById('icon_tutorino').addEventListener('click', () => {
         window.location.href = '../index.html';
