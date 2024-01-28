@@ -18,34 +18,36 @@
 <body>
     <navbar>
         <logo id="icon_tutorino">
-            <img src="../common/img/favicon.png"></img>
+            <img src="../common/img/favicon.png">
             <h1>Tutorino</h1>
         </logo>
     </navbar>
     <main>
         <messages>
             <message>
-                Aby w pełni korzystać z serwisu, należy się zalogować.
-                Jeżeli nie posiadasz konta, możesz je założyć w pełni<b>za darmo!</b>
+                <p>
+                    Aby w pełni korzystać z serwisu, należy się zalogować.
+                    Jeżeli nie posiadasz konta, możesz je założyć <b>za darmo!</b>
+                </p>
             </message>
         </messages>
         <authorization>
-            <form id="step_1" class="step">
+            <form id="step_1">
                 <input type="text" name="email" placeholder="email / login">
                 <input type="submit" value="Dalej">
             </form>
-            <form id="login" class="step hidden">
-                <input type="text" name="email" placeholder="email / login" disabled>
+            <form id="login">
+                <input type="text" name="email" placeholder="email / login">
                 <input type="password" name="password" placeholder="hasło">
                 <input type="submit" value="Dalej">
             </form>
-            <form id="register" class="step hidden">
+            <form id="register">
                 <input type="email" name="email" placeholder="email">
                 <input type="text" name="login" placeholder="login">
                 <input type="text" name="name" placeholder="name">
                 <input type="text" name="surname" placeholder="surname">
-                <input type="text" name="password" placeholder="password">
-                <input type="text" name="password2" placeholder="login">
+                <input type="password" name="password" placeholder="password">
+                <input type="password" name="password2" placeholder="password2">
                 <input type="submit" value="Dalej" id="find_button">
             </form>
         </authorization>
