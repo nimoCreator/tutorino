@@ -21,3 +21,6 @@ authorization > * {
     flex-direction: column;
     gap: 1rem;
 }
+authorization > .hidden {
+    visibility: hidden;
+}

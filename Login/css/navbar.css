@@ -30,7 +30,7 @@ navbar{
 
 /* #region LOGO */
 
-navbar > logo {
+navbar > #logo {
     background-color: var(--navbar-color);
     overflow: hidden;
     border-radius: var(--inner-border-radius);
@@ -47,7 +47,7 @@ navbar > logo {
     padding-left: 0.5rem;
 }
 
-navbar > logo > img {
+navbar > #logo > img {
     width: calc( var(--navbar-height) - var(--navbar-padding) * 4 );
     height: calc( var(--navbar-height) - var(--navbar-padding) * 4 );
     object-fit: cover;
@@ -55,7 +55,7 @@ navbar > logo > img {
     filter: drop-shadow(0 0 1rem #0004);
 }
 
-navbar > logo > h1 {
+navbar > #logo > h1 {
     color: #222;
 }
 
