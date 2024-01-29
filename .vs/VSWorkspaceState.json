@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LandingPage",
+    "\\LandingPage\\css",
+    "\\LandingPage\\js",
+    "\\Login",
+    "\\Login\\css",
+    "\\Login\\js",
+    "\\MyAccount",
+    "\\MyAccount\\css",
+    "\\MyAccount\\js"
   ],
-  "SelectedNode": "\\C:\\Users\\kamil\\Source\\Repos\\tutorino",
+  "SelectedNode": "\\Login\\js\\load.js",
   "PreviewInSolutionExplorer": false
 }
