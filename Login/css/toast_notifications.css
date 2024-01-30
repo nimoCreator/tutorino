@@ -1,0 +1,387 @@
+/* #region Toast Notifications */
+
+#toast_notifications {
+	display: flex;
+	flex-direction: column;
+	justify-items: end;
+	align-items: flex-end;
+
+	color: #ffffff;
+	z-index: 100;
+
+	/* pointer-events: none; */
+
+    position: fixed;
+
+	top: calc(var(--navbar-height) + var(--navbar-margin) * 2);
+	right: var(--navbar-margin);
+
+	max-height: 100vh;
+	
+	overflow-y: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+#toast_notifications::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+#toast_notifications > * {
+	right: 0;
+	z-index: 40;
+	pointer-events: all;
+	border-radius: 1rem;
+    backdrop-filter: blur( 0.5rem );
+	width: max-content;
+}
+#toast_notifications > * > .header {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-radius: 1rem;
+	height: 2rem;
+	border: 0px #ffffff50 solid;
+}
+#toast_notifications > * > .header > .icon {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	float: left;
+	backdrop-filter: blur( 2rem );
+}
+#toast_notifications > * > .header > .icon > img,
+#toast_notifications > * > .header > .button > img {
+	user-select: none;
+    filter: invert(0.5) brightness(100);
+    height: 1.4142135623730950488016887242097rem;
+    width: 1.4142135623730950488016887242097rem;
+}
+#toast_notifications > * > .header > .label {
+	user-select: none;
+	float: left;
+	padding-left: 0rem; padding-right: 0rem;
+	font-size: 0;
+	opacity: 0;
+	visibility: hidden;
+} 
+#toast_notifications > * > .header > .button {
+    width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	align-items: center;
+    justify-content: center;
+	float: right;
+	transition: 1s;
+	background-color: #FFF0;
+
+	padding-left: 0rem; padding-right: 0rem;
+	font-size: 0;
+}
+#toast_notifications > *:hover > .header > .button {
+	background-color: #FFF1;
+}
+#toast_notifications > * > .header > .button:hover {
+	transition: 0.4s;
+	background-color: #FFF3;
+}
+
+#toast_notifications > * > .header > .button > img {
+	opacity: 0;
+	user-select: none;
+    height: 1.4142135623730950488016887242097rem;
+    width: 1.4142135623730950488016887242097rem;
+}
+#toast_notifications > *:hover > .header > .button > img {
+	opacity: 0.5;
+}
+#toast_notifications > * > .header > .button:hover > img {
+	transition: 0.4s;
+	opacity: 1;
+}
+#toast_notifications > * > .content {
+	user-select: text;
+	overflow-wrap: break-word; 
+	max-width: 50vw;
+	font-size: 0;
+	opacity: 0;
+	padding: 0;
+	visibility: hidden;
+}
+/* #endregion Toast Notifications */
+/* #region MINIMALIZED AND MAXIMALIZED */
+
+.minimalized > .content , .closing > .content , .closed > .content  {
+	animation-name: closing_toast_notification_content;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(.45,1,.15,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+.maximalized > .content  {
+	animation-name: open_toast_notification_content;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(.15,1,.45,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+@keyframes open_toast_notification_content {
+	0% {
+		font-size: 0;
+		opacity: 0;
+		padding: 0;
+		visibility: hidden;
+	}
+	25% {
+		font-size: 1rem;
+		opacity: 0;
+	}
+	100% {
+		font-size: 1rem;
+		opacity: 1;
+		padding: 2rem;
+		visibility: visible;
+	}
+}
+@keyframes closing_toast_notification_content {
+	0% {
+		font-size: 1rem;
+		opacity: 1;
+		padding: 2rem;
+		visibility: visible;
+	}
+	25% {
+		font-size: 1rem;
+		opacity: 0;
+	}
+	100% {
+		font-size: 0;
+		opacity: 0;
+		padding: 0;
+		visibility: hidden;
+		
+	}
+}
+
+.minimalized:not(:hover) > .header > .label, .minimalized:not(:hover) > .header > .button,
+.closing > .header > .label, .closing > .header > .button,
+.closed > .header > .label, .closed > .header > .button {
+	animation-name: closing_toast_notification_label;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(.45,1,.15,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+.maximalized > .header > .label, .minimalized:hover:not(.closing):not(.closed) > .header > .label {
+	animation-name: open_toast_notification_label;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(.15,1,.45,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+@keyframes open_toast_notification_label {
+	0% {
+		padding-left: 0rem; padding-right: 0rem;
+		font-size: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+	10% {
+		padding-left: 0.5rem; padding-right: 0.5rem;
+		font-size: 1.5rem;
+	}
+	100% {
+		padding-left: 0.5rem; padding-right: 0.5rem;
+		font-size: 1.5rem;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes closing_toast_notification_label {
+	0% {
+		padding-left: 0.5rem; padding-right: 0.5rem;
+		font-size: 1.5rem;
+		opacity: 1;
+		visibility: visible;
+	}
+	10% {
+		padding-left: 0.5rem; padding-right: 0.5rem;
+		font-size: 1.5rem;
+		opacity: 0;
+	}
+	100% {
+		padding-left: 0rem; padding-right: 0rem;
+		font-size: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.minimalized:not(:hover) > .header > .button,
+.minimalized:not(:hover) > .header > .close,
+.minimalized:not(:hover) > .header > .button > img,
+.closing > .header > .button, .closing > .header > .close, .closing > .header > .button > img,
+.closed > .header > .button, .closed > .header > .close, .closed > .header > .button > img  {
+	padding: 0;
+	margin-left: 0rem;
+	display: none;
+}
+.minimalized:hover:not(.closing):not(.closed) > .header > .button,
+.minimalized:hover:not(.closing):not(.closed) > .header > .close,
+.minimalized:hover:not(.closing):not(.closed) > .header > .button > img {
+	display: flex;
+}
+.maximalized > .header > .button {
+	display: flex;
+}
+
+/* #endregion MINIMALIZED AND MAXIMALIZED */
+/* #region CLOSING */
+
+.closed .button, .closing .button
+{
+	display: none;
+}
+.closed img,
+.closed .icon,
+.closed .label,
+.closed .header,
+.closed .timeline  {
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(.15,1,.45,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-name:  removeing_toast_notification_header;
+}
+@keyframes  removeing_toast_notification_header {
+	0% {
+	}
+	50% {
+		opacity: 0;
+		background-color: #0000;
+	}
+	100% {
+		opacity: 0;
+		background-color: #0000;
+		height: 0;
+	}
+}
+.closed {
+	opacity: 0;
+	background-color: #0000;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* #endregion CLOSING */
+
+/* TIMELINE */
+
+#toast_notifications > *:not(.closing) {
+	margin-bottom: 0.2rem;
+}
+
+#toast_notifications > *:not(.closing):has(.timeline) {
+	margin-bottom: 0.4rem;
+}
+
+#toast_notifications > * > .timeline {
+	position: absolute;
+	margin-top: 0.1rem;
+	width: 100%;
+	height: 3px;
+
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	border-radius: 100vh;
+	overflow: hidden;
+
+	animation-duration: 5s;
+	animation-timing-function: cubic-bezier(.85,.85,.85,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-name: time_running_out;
+}
+#toast_notifications > * > .timeline > .left {
+	background-color: #FFF;
+	border-radius: 100vh;
+	height: 100%;
+	animation-duration: 5s;
+	animation-timing-function: cubic-bezier(.85,.85,.85,1) ;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-name: time_left_notification, time_running_out_left;
+}
+@keyframes  time_left_notification {
+	0% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+@keyframes  time_running_out {
+	100% {
+		background-color: #ff525200;
+	}
+	99% {
+		background-color: #ff525266;
+	}
+	0%, 80% {
+		background-color: #88888844;
+	}
+}
+@keyframes  time_running_out_left {
+	100% {
+		background-color: #FFF0;
+	}
+	99% {
+		background-color: #ff5252;
+	}
+	0%, 80% {
+		background-color: #FFF;
+	}
+}
+#toast_notifications > .closing > .timeline,
+#toast_notifications > .closing > .timeline > .left {
+	background-color: #FFF0 !important;
+}
+
+/* COLORS */
+
+#toast_notifications > * { background-color: #777777aa; }
+#toast_notifications > .information { background-color: #2196f3aa; }
+#toast_notifications > .success { background-color: #4caf50aa; }
+#toast_notifications > .alert {	background-color: #ffc107aa; }
+#toast_notifications > .error {	background-color: #ff5252aa; }
+#toast_notifications > .nimo {	background-color: #00aaffaa; }
+
+#toast_notifications > * > .header { background-color: #777777aa; user-select: text; }
+#toast_notifications > .information > .header { background-color: #2196f3aa; }
+#toast_notifications > .success > .header {	background-color: #4caf50aa; }
+#toast_notifications > .alert > .header { background-color: #ffc107aa; }
+#toast_notifications > .error > .header { background-color: #ff5252aa; }
+#toast_notifications > .nimo > .header { background-color: #00aaffaa; }
+
+#toast_notifications > * > .header > .icon { background-color: #777777; user-select: none; }
+#toast_notifications > .information > .header > .icon { background-color: #2196f3; }
+#toast_notifications > .success > .header > .icon {	background-color: #4caf50; }
+#toast_notifications > .alert > .header > .icon { background-color: #ffc107; }
+#toast_notifications > .error > .header > .icon { background-color: #ff5252; }
+#toast_notifications > .nimo > .header > .icon { background-color: #00aaff; }

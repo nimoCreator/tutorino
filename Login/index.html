@@ -10,7 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/base.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/messages.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/toast_notifications.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/auth.css'>
 
     <link rel="shortcut icon" href="../common/img/favicon.png" type="image/x-icon">
@@ -18,7 +18,7 @@
     <script src='./js/load.js'></script>
     <script src="./js/auth.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/messages.js"></script>
+    <script src="./js/toast_notifications.js"></script>
 </head>
 <body>
     <navbar>
@@ -27,33 +27,103 @@
             <h1>Tutorino</h1>
         </a>
     </navbar>
-    <main>
-        <messages id="messages">
 
-        </messages>
+    <main>
         <authorization>
-            <form id="step_1">
-                <input type="text" name="email" placeholder="email / login">
-                <input type="submit" value="Dalej">
+            <form id="step_1" class="">
+                <h1>Witaj!</h1>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="enter_login" placeholder="email / login" type="text">
+                </div>
+                <input id="enter_button" class="submit" type="submit" value="Dalej"></input>
+
             </form>
-            <form id="login">
-                <input type="text" name="email" placeholder="email / login">
-                <input type="password" name="password" placeholder="hasło">
-                <input type="submit" value="Dalej">
+            <form id="login" class="hidden">
+                <h1>Logowanie</h1>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="login_login" placeholder="email / login" type="text">
+                </div>
+                <div class="panel password">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/padlock.svg">
+                    </div>
+                    <input class="nimoweb_password" id="login_password" placeholder="password" type="password">
+                    <button id="login_password_toggle" class="nimoweb_password_eye">
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/eye_closed.svg">
+                    </button>
+                </div>
+                <input id="login_button" class="submit" type="submit" value="Zaloguj się"></input>
+
             </form>
-            <form id="register">
-                <input type="email" name="email" placeholder="email">
-                <input type="text" name="login" placeholder="login">
-                <input type="text" name="name" placeholder="name">
-                <input type="text" name="surname" placeholder="surname">
-                <input type="password" name="password" placeholder="password">
-                <input type="password" name="password2" placeholder="password2">
-                <input type="submit" value="Dalej" id="find_button">
+            <form id="register" class="hidden">
+                <h1>Rejestracja</h1>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="register_email" placeholder="email" type="email">
+                </div>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="register_login" placeholder="login" type="text">
+                </div>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="register_name" placeholder="imie" type="text">
+                </div>
+                <div class="panel">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/user.svg">
+                    </div>
+                    <input id="register_surname" placeholder="nazwisko" type="text">
+                </div>
+                <div class="panel password">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/padlock.svg">
+                    </div>
+                    <input class="nimoweb_password" id="register_password1" placeholder="password" type="password">
+                    <button id="register_passrowd1_toggle" class="nimoweb_password_eye">
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/eye_closed.svg">
+                    </button>
+                </div>
+                <div class="panel password">
+                    <div>
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/padlock.svg">
+                    </div>
+                    <input class="nimoweb_password" id="register_password2" placeholder="repeat password" type="password">
+                    <button id="register_passrowd2_toggle" class="nimoweb_password_eye">
+                        <img src="https://nimoweb.ddns.net/myaccount/login/img/eye_closed.svg">
+                    </button>
+                </div>
+                <input id="register_button" class="submit" type="submit" value="Zarejestruj się"></input>
             </form>
         </authorization>
     </main>
-    <footer>
-        
-    </footer>   
+    <alternatives>
+        <div class="options">
+            <div id="login_with_google">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/800px-Google_%22G%22_logo.svg.png">
+            </div>
+            <div id="login_with_facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg">
+            </div>
+            <div id="login_with_discord">
+                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg">
+            </div>
+        </div>
+    </alternatives>
+    <toast_notifications id="toast_notifications">
+
+    </toast_notifications>
 </body>
 </html>

@@ -1,0 +1,184 @@
+resoults {
+    gap: 0.5rem;
+    padding: 1.5rem;
+    height: max-content;
+
+
+    padding-top: calc( var(--navbar-margin) + var(--navbar-height) * 2);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+resoults > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: #f8f8f8;
+    border-radius: 0.75rem 0.75rem 0.5rem 0.5rem;
+    box-shadow: #64646f33 0rem 0.125rem 0.25rem 0.125rem;
+
+    min-width: 25rem;
+
+    position: relative;
+    flex-grow: 1;
+}
+
+resoults > * > cover {
+    height: 5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+
+    background-image: url("https://picsum.photos/201");
+    background-position: top center;
+    background-size: cover;
+}
+resoults > * description {
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+
+    height: 6rem;
+    width: 20rem;
+
+    color: #0000;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+
+resoults > * > container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+
+    font-weight: 600;
+}
+resoults > * > container > ocena {
+    font-size: 0.75rem;
+    font-weight: 100;
+    letter-spacing: -0.125rem;
+
+    width: 5.5rem;
+    text-align: center;
+
+    transform: translateY(-0.25rem);
+}
+resoults > * > pfp {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+
+    outline: 1px solid #fff4;
+    outline-offset: 1px;
+
+    border-radius: 2.5rem 2.5rem 0 0;
+} 
+resoults > * > pfp > img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+}
+
+resoults > * flags {
+    position: absolute;
+    top: -0.25rem;
+    left: 0.25rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.125rem;
+}
+
+resoults > * flags flag {
+    font-size: 0.5rem;
+    background-color: #ffb900;
+    font-weight: 600;
+    padding: 0 0.25rem;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+resoults > * {
+    transition: 0.4s;
+}
+
+resoults > * description {
+    transition: 0.4s;
+}
+
+resoults > * cover {
+    transition: 0.6s;
+}
+
+resoults > * container ocena {
+    transition: 0.8s;
+}
+resoults > * pfp {
+    transition: 0.4s;
+}
+
+
+resoults > *:hover {
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: #64646f33 0rem 0.125rem 0.25rem 0.125rem;
+    transform: scale(1.025);
+
+    border-radius: 0.75rem 4rem 0.5rem 0.5rem;
+
+    transition: 0.2s;
+}
+
+resoults > *:hover description {
+    color: #000;
+
+    transition: 0.2s;
+}
+
+resoults > *:hover cover {
+    opacity: 0.25;
+    border-radius: 0.75rem 3rem 0 0;
+
+    transition: 0.2s;
+}
+resoults > *:hover container ocena {
+    transform: scale(1.1);
+    transform: translateY(0rem);
+
+    transition: 0.6s;
+}
+resoults > *:hover pfp {
+    border-radius: 100%;
+    transform: scale(1.1);
+
+    transition: 0.2s;
+}

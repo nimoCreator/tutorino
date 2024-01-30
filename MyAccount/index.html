@@ -28,12 +28,12 @@
             <hr/>
             <nav>
                 <a>
-                    <icon><img src="../common/img/panel_navbar/calendar.svg"></icon>
-                    <span>Kalendarz</span>
+                    <icon><img src="../common/img/panel_navbar/notifications.svg"></icon>
+                    <span>Powiadomienia</span>
                 </a>
                 <a>
-                    <icon><img src="../common/img/panel_navbar/money.svg"></icon>
-                    <span>Należności</span>
+                    <icon><img src="../common/img/panel_navbar/messages.svg"></icon> 
+                    <span>Wiadomości</span>
                 </a>
                 <a>
                     <icon><img src="../common/img/panel_navbar/search.svg"></icon>
@@ -47,21 +47,21 @@
         </topsection>
         <bottomsection>
             <nav>
-                <a>
-                    <icon><img src="../common/img/panel_navbar/notifications.svg"></icon>
-                    <span>Powiadomienia</span>
+                <a href="#calendar_div">
+                    <icon><img src="../common/img/panel_navbar/calendar.svg"></icon>
+                    <span>Kalendarz</span>
                 </a>
-                <a>
-                    <icon><img src="../common/img/panel_navbar/messages.svg"></icon> 
-                    <span>Wiadomości</span>
+                <a href="#finances_div">
+                    <icon><img src="../common/img/panel_navbar/money.svg"></icon>
+                    <span>Należności</span>
                 </a>
-                <a>
-                    <icon><img src="../common/img/panel_navbar/support.svg"></icon>
-                    <span>Wsparcie</span>
-                </a>
-                <a>
+                <a href="#settings_div">
                     <icon><img src="../common/img/panel_navbar/settings.svg"></icon>
                     <span>Ustawienia</span>
+                </a>
+                <a href="#support_div">
+                    <icon><img src="../common/img/panel_navbar/support.svg"></icon>
+                    <span>Wsparcie</span>
                 </a>
             </nav>
             <hr />
@@ -73,15 +73,18 @@
         </bottomsection>    
     </navbar>
     <main>
-        <calendar class="templong">
+        <calendar id="calendar_div" class="templong">
             <label>Kalendarz</label>
         </calendar>
-        <finances  class="templong">
+        <finances id="finances_div" class="templong">
             <label>Należności</label>
         </finances>
-        <settings>
+        <settings id="settings_div" class="templong">
             <label>Ustawienia</label>
         </settings>
+        <support id="support_div" class="templong">
+            <label>Wsparcie</label>
+        </support>
     </main>
     <next>
         Nastepne zajecia za Czas

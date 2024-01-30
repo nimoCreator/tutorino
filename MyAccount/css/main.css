@@ -25,3 +25,8 @@ main * {
 main *.templong {
     height: 60vh;
 }
+
+main label {
+    font-size: 2em;
+    font-weight: bold;
+}
