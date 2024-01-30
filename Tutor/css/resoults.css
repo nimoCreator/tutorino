@@ -68,8 +68,22 @@ resoults > * > container > ocena {
 
     width: 5.5rem;
     text-align: center;
+}
+resoults > * > container > ocena > button {
+    font-weight: 600;
+    outline: transparent;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+resoults > * > container > ocena > button:hover {
+    background-color: #00aaff;
+    box-shadow: #64646f33 0rem 0.125rem 0.25rem 0.125rem;
+    transform: scale(1.025);
+    transition: 0.2s;
+}
+resoults > * > container > ocena > button:active {
 
-    transform: translateY(-0.25rem);
 }
 resoults > * > pfp {
     position: absolute;
