@@ -176,7 +176,10 @@ navbar > * > nav > a {
     color: #888;
     border-radius: 0.125rem;
 
-    transition: 0.6s;
+    transition: 0.4s;
+}
+navbar > * > nav > a > icon > img {
+    transition: 0.4s;
 }
 navbar > * > nav > a:hover {
     background-color: #22aaff11;
@@ -185,13 +188,23 @@ navbar > * > nav > a:hover {
 
     transition: 0.2s;
 }
-navbar > * > nav > a > icon > img {
-    transition: 0.6s;
-}
 navbar > * > nav > a:hover > icon > img  {
     filter: invert(0) brightness(1);
-    transition: 0.4s;
+    transition: 0.2s;
 }
+navbar > * > nav > a:active {
+    background-color: #009dff;
+    outline: 0.25rem solid #009dff;
+    color: #ffffff;
+
+    transition: 0.05s;
+}
+navbar > * > nav > a:active > icon > img  {
+    filter: invert(0.5) brightness(2);
+    opacity: 0.5;
+    transition: 0.05s;
+}
+
 
 
 /* #endregion */
